@@ -1,0 +1,19 @@
+{% extends "shell.html" %}
+{% block content %}
+<div id="news">
+RECENT NEWS ::
+
+{% for news in all_news %}
+<div class="news-item">
+<p>
+{{ news.news }}
+<p>
+{% if not forloop.last %}
+::
+{% endif %}
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
+

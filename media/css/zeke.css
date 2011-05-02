@@ -1,0 +1,237 @@
+body
+{
+    background-color:rgb(148,206,222);
+}
+
+a
+{
+    text-decoration:none;
+}
+
+#page
+{
+    margin-left:auto;
+    margin-right:auto;
+    z-index:3;
+}
+
+.default_bg
+{
+    background-image:url('/media/img/zeke_background.png');
+    background-repeat:no-repeat;
+    width:800px;
+    height:600px;
+
+}
+
+.video_bg
+{
+    background-image:url('/media/img/zeke_video_background_no_pink.png');
+    background-repeat:no-repeat;
+    width:800px;
+    height:1198px;
+
+}
+
+#page_under_image
+{
+    position:relative;
+    
+    top:200px;
+    background-image:url('/media/img/zeke_background_repeat.png');
+    background-repeat:repeat-y;
+    z-index:1;
+}
+
+#content
+{
+    color:white;
+    font-family:Helvetica;
+    font-size:12px;
+    line-height:15px;
+
+    position:relative;
+    top:90px;
+    left:110px;
+    width:600px;
+}
+
+#navigation
+{
+    position:relative;
+    top:55px;
+    margin-left:auto;
+    margin-right:auto;
+    width:714px;
+    height:45px;
+}
+
+.navigation-class
+{
+    background-image:url('/media/img/Z___.png')
+}
+
+.navigation-class-hover
+{
+    background-image:url('/media/img/zeke_home_hover.png')
+}
+
+#nav-news
+{
+    width:40px;
+    height:10px;
+    
+    position:relative;
+    left:8px;
+    top:17px;
+}
+
+#nav-work
+{
+    width:40px;
+    height:10px;
+    
+    position:relative;
+    left:60px;
+    top:17px;
+}
+
+#nav-play
+{
+    width:40px;
+    height:10px;
+    
+    position:relative;
+    left:100px;
+    top:15px;
+}
+
+#nav-contact
+{
+    width:40px;
+    height:10px;
+    
+    position:relative;
+    left:150px;
+    top:17px;
+}
+
+#zeke_work_hover
+{
+    visibility:hidden;
+    position:relative;
+    left:108px;
+    top:-1px;
+}
+
+#zeke_play_hover
+{
+    visibility:hidden;
+    position:relative;
+    left:147px;
+    top:-2px;
+}
+
+#zeke_contact_hover
+{
+    visibility:hidden;
+    position:relative;
+    left:201px;
+    top:-1px;
+}
+
+#news
+{
+    position:relative;
+    left:25px;
+    width:300px;
+}
+
+.news-item
+{
+    position:relative;
+    left:50px;
+    width:330px;
+}
+
+#contact
+{
+    position:relative;
+    left:10px;
+    top:20px;
+}
+
+#movies
+{
+    position:relative;
+    left:40px;
+}
+
+.video-title
+{
+    position:relative;
+    left:-14px;
+}
+
+#prev-link
+{
+    position:absolute;
+    left:-117px;
+    top:-8px;
+    width:54px;
+    height:1052px;
+    background-image:url('/media/img/zeke_previous_page.png')
+}
+
+#next-link
+{
+    position:absolute;
+    left:547px;
+    top:-8px;
+    width:76px;
+    height:1053px;
+    background-image:url('/media/img/zeke_next_page.png')
+}
+
+#prev-link-hover-id
+{
+    position:absolute;
+    left:-117px;
+    top:-8px;
+    width:55px;
+    height:1065px;
+    background-image:url('/media/img/zeke_previous_page_hover.png');
+    visibility:hidden;
+}
+
+#next-link-hover-id
+{
+    position:absolute;
+    left:547px;
+    top:-8px;
+    width:76px;
+    height:1053px;
+    background-image:url('/media/img/zeke_next_page_hover.png');
+    visibility:hidden;
+}
+
+
+#no-prev-link
+{
+    position:absolute;
+    left:-117px;
+    top:-8px;
+    width:54px;
+    height:1052px;
+    background-image:url('/media/img/zeke_clean_pink_left.png')
+}
+
+#no-next-link
+{
+    position:absolute;
+    left:547px;
+    top:-8px;
+    width:54px;
+    height:1052px;
+    background-image:url('/media/img/zeke_clean_pink_right.png')
+}

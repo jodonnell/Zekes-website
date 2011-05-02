@@ -1,0 +1,79 @@
+{% extends "shell.html" %}
+
+{% block more_script %}
+<!--       image = new Image(55, 1065); -->
+<!--       image.src = "/media/img/zeke_previous_page_hover.png"; -->
+
+      function previous_hover() {
+      document.getElementById('prev-link').style.visibility = 'hidden';
+      document.getElementById('prev-link-hover-id').style.visibility = 'visible';
+      }
+
+      function previous_hover_out() {
+      document.getElementById('prev-link').style.visibility = 'visible';
+      document.getElementById('prev-link-hover-id').style.visibility = 'hidden';
+      }
+
+      function next_hover() {
+      document.getElementById('next-link').style.visibility = 'hidden';
+      document.getElementById('next-link-hover-id').style.visibility = 'visible';
+      }
+
+      function next_hover_out() {
+      document.getElementById('next-link').style.visibility = 'visible';
+      document.getElementById('next-link-hover-id').style.visibility = 'hidden';
+      }
+
+{% endblock %}
+
+{% block bg_class %}video_bg{% endblock %}
+
+{% block content %}
+
+<div id="movies">
+
+        {% if videos.has_previous %}
+	<a onmouseover="previous_hover();" onmouseout="previous_hover_out();" href="?page={{ videos.previous_page_number }}">
+	  <div id="prev-link">
+	  </div>
+	  <div id="prev-link-hover-id">
+	  </div>
+        </a>
+	{% else %}
+	<div id="no-prev-link">
+	</div>
+        {% endif %}
+
+        {% if videos.has_next %}
+        <a onmouseover="next_hover();" onmouseout="next_hover_out();" href="?page={{ videos.next_page_number }}">
+	  <div id="next-link">
+	  </div>
+	  <div id="next-link-hover-id">
+	  </div>
+        </a>
+	{% else %}
+	  <div id="no-next-link">
+	  </div>
+        {% endif %}
+
+
+{% for video in videos.object_list %}
+    {{ video.embed_video_html|safe }}
+<p>
+  <div class="video-title">
+    {{ video.video_title }}
+  </div>
+
+<p>
+{% endfor %}
+
+</div>
+
+<div class="pagination">
+
+        <span class="current">
+            Page {{ videos.number }} of {{ videos.paginator.num_pages }}.
+        </span>
+</div>
+
+{% endblock %}

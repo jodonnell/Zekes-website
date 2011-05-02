@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/media/css/zeke.css" />
+    
+    <script>
+      function hover(id, visibility) {
+      document.getElementById(id).style.visibility = visibility;
+      }
+      function hover_home() {
+      document.getElementById('navigation').className = 'navigation-class-hover';
+      }
+      function hover_out_home() {
+      document.getElementById('navigation').className = 'navigation-class';
+      }
+
+      image = new Image(715, 47);
+      image.src = "/media/img/zeke_home_hover.png";
+
+      {% block more_script %}{% endblock %}
+    </script>
+
+  </head>
+
+  <body>
+    <div id="page" class="{% block bg_class %}default_bg{% endblock %}">
+	<div id="navigation" class="navigation-class">
+	  <a id="nav-news" href="/" onmouseover="hover_home();" onmouseout="hover_out_home();"><img src="/media/img/zeke_news.png" border=0></a>
+
+	  <img id="zeke_work_hover" src="/media/img/zeke_E.png">
+	  <a id="nav-work" href="/work/" onmouseover="hover('zeke_work_hover', 'visible');" onmouseout="hover('zeke_work_hover', 'hidden');"><img src="/media/img/zeke_work.png" border=0></a>
+
+	  <img id="zeke_play_hover" src="/media/img/zeke_K.png">
+	  <a id="nav-play" href="/play/" onmouseover="hover('zeke_play_hover', 'visible');" onmouseout="hover('zeke_play_hover', 'hidden');"><img src="/media/img/zeke_play.png" border=0></a>
+
+	  <img id="zeke_contact_hover" src="/media/img/zeke_E.png">
+	  <a id="nav-contact" href="/contact/" onmouseover="hover('zeke_contact_hover', 'visible');" onmouseout="hover('zeke_contact_hover', 'hidden');"><img src="/media/img/zeke_contact.png" border=0></a>
+	</div>
+	<br/>
+	<div id="content">
+	  {% block content %}{% endblock %}
+	</div>
+      </div>
+  </body>
+</html>
